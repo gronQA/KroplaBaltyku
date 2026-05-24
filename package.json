@@ -2,7 +2,7 @@
   "name": "kropla-baltyku",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://gronqa.github.io/kropla-baltyku/",
+  "homepage": "https://kropla-baltyku.pl",
   "type": "module",
   "scripts": {
     "dev": "vite",
