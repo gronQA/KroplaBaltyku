@@ -83,7 +83,7 @@ const Home = () => {
               Kropla Bałtyku
             </h1>
             <p className="text-white/90 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
-              Odkryj spokój i luksus w sercu Tupadeł. Twój prywatny azyl blisko Jastrzębiej Góry z pięknym słonecznym ogrodem.
+              Odkryj spokój i luksus w sercu Tupadeł. Apartament Kropla Bałtyku, będący częścią kameralnego ośrodka Bałtycka Oaza, to Twój prywatny azyl blisko Jastrzębiej Góry.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
@@ -149,6 +149,7 @@ const Home = () => {
                 </p>
                 <ul className="space-y-4 pt-4">
                   {[
+                    'Część prestiżowego ośrodka Bałtycka Oaza',
                     'Bliskość piaszczystych plaż i natury',
                     'Spokojna atmosfera sprzyjająca regeneracji',
                     'Prywatny ogródek z ekspozycją południową',
