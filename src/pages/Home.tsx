@@ -277,22 +277,22 @@ const Home = () => {
 
               <div className="space-y-8">
                 <a href="tel:608089312" className="flex items-center space-x-6 group">
-                  <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-marine-500 transition-colors">
+                  <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-marine-500 transition-colors flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="text-sm text-slate-500 uppercase tracking-widest mb-1">Telefon</div>
-                    <div className="text-2xl font-bold">608 089 312</div>
+                    <div className="text-xl md:text-2xl font-bold">608 089 312</div>
                   </div>
                 </a>
 
                 <a href="mailto:apartament.kroplabaltyku@gmail.com" className="flex items-center space-x-6 group">
-                  <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-marine-500 transition-colors">
+                  <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-marine-500 transition-colors flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="text-sm text-slate-500 uppercase tracking-widest mb-1">E-mail</div>
-                    <div className="text-lg sm:text-xl md:text-2xl font-bold break-words">
+                    <div className="text-base sm:text-lg md:text-2xl font-bold break-words">
                       apartament.<wbr/>kroplabaltyku@gmail.com
                     </div>
                   </div>
@@ -304,12 +304,12 @@ const Home = () => {
                   rel="noopener noreferrer" 
                   className="flex items-center space-x-6 group"
                 >
-                  <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-marine-500 transition-colors">
+                  <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-marine-500 transition-colors flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="text-sm text-slate-500 uppercase tracking-widest mb-1">Adres</div>
-                    <div className="text-2xl font-bold">Borowikowa 3G/1, Tupadły</div>
+                    <div className="text-lg md:text-2xl font-bold">Borowikowa 3G/1, Tupadły</div>
                   </div>
                 </a>
               </div>
