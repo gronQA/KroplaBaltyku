@@ -292,7 +292,9 @@ const Home = () => {
                   </div>
                   <div>
                     <div className="text-sm text-slate-500 uppercase tracking-widest mb-1">E-mail</div>
-                    <div className="text-2xl font-bold">apartament.kroplabaltyku@gmail.com</div>
+                    <div className="text-xl md:text-2xl font-bold break-words">
+                      apartament.<wbr/>kroplabaltyku@gmail.com
+                    </div>
                   </div>
                 </a>
 
