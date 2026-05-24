@@ -3,15 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Waves, 
   Coffee, 
-  Wifi, 
   MapPin, 
   Phone, 
   Mail, 
   Zap, 
   ThermometerSun, 
   Car, 
-  Sun,
-  Tv
+  Sun
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
