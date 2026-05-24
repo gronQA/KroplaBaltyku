@@ -28,7 +28,7 @@ const benefits = [
   { icon: Waves, title: 'Basen', description: 'Ochłoda w zasięgu ręki' },
   { icon: Coffee, title: 'Kuchnia', description: 'Płyta indukcyjna, ekspres, zmywarka' },
   { icon: Car, title: 'Parking', description: 'Miejsce przypisane do apartamentu' },
-  { icon: Zap, title: 'Wyposażenie', description: 'TV, żelazko, składana suszarka, pralka' },
+  { icon: Zap, title: 'Wyposażenie', description: 'TV, żelazko, składana suszarka' },
 ];
 
 const distances = [
