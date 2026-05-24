@@ -3,20 +3,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 
 const allImages = [
-  { src: `${import.meta.env.BASE_URL}hero-1.png`, title: 'Nowoczesny ośrodek' },
-  { src: `${import.meta.env.BASE_URL}hero-2.png`, title: 'Strefa relaksu' },
-  { src: `${import.meta.env.BASE_URL}hero-3.png`, title: 'Basen' },
-  { src: `${import.meta.env.BASE_URL}hero-4.png`, title: 'Piękna okolica' },
-  { src: `${import.meta.env.BASE_URL}hero-5.png`, title: 'Plac zabaw' },
-  { src: `${import.meta.env.BASE_URL}all-6.jpeg`, title: 'Jacuzzi' },
-  { src: `${import.meta.env.BASE_URL}all-7.jpeg`, title: 'Sauna' },
-  { src: `${import.meta.env.BASE_URL}all-8.jpeg`, title: 'Wyposażona kuchnia' },
-  { src: `${import.meta.env.BASE_URL}all-9.jpeg`, title: 'Świetna lokalizacja' },
-  { src: `${import.meta.env.BASE_URL}all-10.jpeg`, title: 'Przytulne wnętrze' },
-  { src: `${import.meta.env.BASE_URL}all-11.jpeg`, title: 'Nowoczesny apartament' },
-  { src: `${import.meta.env.BASE_URL}all-12.jpeg`, title: 'Taras z ogródkiem' },
-  { src: `${import.meta.env.BASE_URL}all-13.jpeg`, title: 'Komfortowa sypialnia' },
-  { src: `${import.meta.env.BASE_URL}all-14.jpeg`, title: 'Tutaj wypoczniesz' },
+  { src: '/hero-1.png', title: 'Nowoczesny ośrodek' },
+  { src: '/hero-2.png', title: 'Strefa relaksu' },
+  { src: '/hero-3.png', title: 'Basen' },
+  { src: '/hero-4.png', title: 'Piękna okolica' },
+  { src: '/hero-5.png', title: 'Plac zabaw' },
+  { src: '/all-6.jpeg', title: 'Jacuzzi' },
+  { src: '/all-7.jpeg', title: 'Sauna' },
+  { src: '/all-8.jpeg', title: 'Wyposażona kuchnia' },
+  { src: '/all-9.jpeg', title: 'Świetna lokalizacja' },
+  { src: '/all-10.jpeg', title: 'Przytulne wnętrze' },
+  { src: '/all-11.jpeg', title: 'Nowoczesny apartament' },
+  { src: '/all-12.jpeg', title: 'Taras z ogródkiem' },
+  { src: '/all-13.jpeg', title: 'Komfortowa sypialnia' },
+  { src: '/all-14.jpeg', title: 'Tutaj wypoczniesz' },
 ];
 
 const Gallery = () => {
