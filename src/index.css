@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Outfit', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 overflow-x-hidden;
+}
+
+.morski-gradient {
+  @apply bg-gradient-to-br from-marine-500 to-marine-700;
+}
+
+.text-morski {
+  @apply text-marine-600;
+}
