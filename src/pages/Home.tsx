@@ -127,9 +127,9 @@ const Home = () => {
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <img src="/all-6.jpeg" alt="Ogród apartamentu" className="w-full h-full object-cover" />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-marine-600 text-white p-8 rounded-3xl shadow-xl hidden md:block max-w-xs">
-                <Waves className="w-10 h-10 mb-4" />
-                <p className="font-serif text-xl leading-snug">Zrelaksuj się w Jacuzzi</p>
+              <div className="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-8 bg-marine-600 text-white p-6 md:p-8 rounded-3xl shadow-xl max-w-[200px] md:max-w-xs">
+                <Waves className="w-8 h-8 md:w-10 md:h-10 mb-2 md:mb-4" />
+                <p className="font-serif text-lg md:text-xl leading-snug">Zrelaksuj się w Jacuzzi</p>
               </div>
             </motion.div>
 
@@ -176,7 +176,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {benefits.map((benefit, i) => (
               <motion.div
                 key={i}
@@ -184,13 +184,13 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                className="bg-white p-4 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
               >
-                <div className="w-14 h-14 bg-marine-50 rounded-2xl flex items-center justify-center text-marine-600 mb-6">
-                  <benefit.icon className="w-7 h-7" />
+                <div className="w-10 h-10 sm:w-14 sm:h-14 bg-marine-50 rounded-xl sm:rounded-2xl flex items-center justify-center text-marine-600 mb-4 sm:mb-6">
+                  <benefit.icon className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{benefit.title}</h3>
-                <p className="text-slate-500">{benefit.description}</p>
+                <h3 className="text-base sm:text-xl font-bold text-slate-900 mb-1 sm:mb-2">{benefit.title}</h3>
+                <p className="text-xs sm:text-base text-slate-500">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
