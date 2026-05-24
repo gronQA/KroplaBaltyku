@@ -57,7 +57,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-3 group">
           <div className="relative">
             <img 
-              src="/favicon.svg" 
+              src={`${import.meta.env.BASE_URL}favicon.svg`} 
               alt="Logo" 
               className="w-10 h-10 group-hover:scale-110 transition-transform duration-500 ease-out" 
             />

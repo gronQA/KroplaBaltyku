@@ -8,7 +8,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/kropla-baltyku">
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />

@@ -14,11 +14,11 @@ import {
 import { Link } from 'react-router-dom';
 
 const heroImages = [
-  '/hero-1.jpeg',
-  '/hero-2.jpeg',
-  '/hero-3.jpeg',
-  '/hero-4.jpeg',
-  '/hero-5.jpeg',
+  `${import.meta.env.BASE_URL}hero-1.jpeg`,
+  `${import.meta.env.BASE_URL}hero-2.jpeg`,
+  `${import.meta.env.BASE_URL}hero-3.jpeg`,
+  `${import.meta.env.BASE_URL}hero-4.jpeg`,
+  `${import.meta.env.BASE_URL}hero-5.jpeg`,
 ];
 
 const benefits = [
@@ -124,7 +124,7 @@ const Home = () => {
               className="relative"
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-                <img src="/all-6.jpeg" alt="Ogród apartamentu" className="w-full h-full object-cover" />
+                <img src={`${import.meta.env.BASE_URL}all-6.jpeg`} alt="Ogród apartamentu" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-marine-600 text-white p-8 rounded-3xl shadow-xl hidden md:block max-w-xs">
                 <Waves className="w-10 h-10 mb-4" />
@@ -241,7 +241,8 @@ const Home = () => {
                   <div className="w-full h-full relative rounded-2xl flex items-center justify-center overflow-hidden bg-slate-200 group-hover:bg-marine-700 transition-colors duration-500">
                     {/* Map Background */}
                     <div 
-                      className="absolute inset-0 bg-[url('/mapa.png')] bg-cover bg-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700 mix-blend-multiply"
+                      className="absolute inset-0 bg-cover bg-center grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700 mix-blend-multiply"
+                      style={{ backgroundImage: `url(${import.meta.env.BASE_URL}mapa.png)` }}
                     />
                     
                     {/* Content */}
@@ -313,7 +314,7 @@ const Home = () => {
             </div>
 
             <div className="lg:w-1/2 relative min-h-[400px]">
-              <img src="/hero-3.jpeg" alt="Kontakt" className="absolute inset-0 w-full h-full object-cover opacity-60" />
+              <img src={`${import.meta.env.BASE_URL}hero-3.jpeg`} alt="Kontakt" className="absolute inset-0 w-full h-full object-cover opacity-60" />
               <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-transparent hidden lg:block" />
             </div>
           </div>

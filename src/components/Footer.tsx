@@ -8,8 +8,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <img src="/favicon.svg" alt="Logo" className="w-10 h-10" />
+              <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Logo" className="w-10 h-10" />
               <div className="flex flex-col -space-y-1">
+
                 <span className="font-serif text-2xl tracking-tight text-white italic font-light">
                   Kropla Bałtyku
                 </span>
