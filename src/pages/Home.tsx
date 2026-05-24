@@ -142,10 +142,10 @@ const Home = () => {
               <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-8 leading-tight">Relaks w słońcu na własnym tarasie</h2>
               <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
                 <p>
-                  Kropla Bałtyku to miejsce stworzone z myślą o pełnym wyciszeniu i regeneracji. Bliskość piaszczystych plaż Jastrzębiej Góry i szum morza tworzą idealne warunki do ucieczki od codziennego zgiełku.
+                  Kropla Bałtyku to wyjątkowe miejsce położone w malowniczym uścisku natury – z jednej strony otula nas szum morza, a z drugiej kojący spokój lasu. To idealne warunki do pełnego wyciszenia i regeneracji.
                 </p>
                 <p>
-                  Po dniu spędzonym na plaży, możesz odetchnąć na prywatnym tarasie z własnym ogródkiem. Dzięki południowej ekspozycji, słońce towarzyszy Ci przez cały dzień, tworząc przytulny zakątek do wieczornego relaksu.
+                  Po dniu spędzonym na piaszczystej plaży lub spacerze wśród leśnych ścieżek, możesz odetchnąć na prywatnym tarasie z własnym ogródkiem. Dzięki południowej ekspozycji, słońce towarzyszy Ci przez cały dzień, tworząc przytulny zakątek do wieczornego relaksu.
                 </p>
                 <ul className="space-y-4 pt-4">
                   {[
