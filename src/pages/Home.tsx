@@ -316,7 +316,7 @@ const Home = () => {
             </div>
 
             <div className="lg:w-1/2 relative min-h-[400px]">
-              <img src={`${import.meta.env.BASE_URL}hero-3.jpeg`} alt="Kontakt" className="absolute inset-0 w-full h-full object-cover opacity-60" />
+              <img src={`${import.meta.env.BASE_URL}hero-3.png`} alt="Kontakt" className="absolute inset-0 w-full h-full object-cover opacity-60" />
               <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-transparent to-transparent hidden lg:block" />
             </div>
           </div>

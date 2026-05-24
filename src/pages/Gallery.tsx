@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 
 const allImages = [
-  { src: `${import.meta.env.BASE_URL}hero-1.jpeg`, title: 'Nowoczesny ośrodek' },
-  { src: `${import.meta.env.BASE_URL}hero-2.jpeg`, title: 'Strefa relaksu' },
-  { src: `${import.meta.env.BASE_URL}hero-3.jpeg`, title: 'Basen' },
-  { src: `${import.meta.env.BASE_URL}hero-4.jpeg`, title: 'Piękna okolica' },
-  { src: `${import.meta.env.BASE_URL}hero-5.jpeg`, title: 'Plac zabaw' },
+  { src: `${import.meta.env.BASE_URL}hero-1.png`, title: 'Nowoczesny ośrodek' },
+  { src: `${import.meta.env.BASE_URL}hero-2.png`, title: 'Strefa relaksu' },
+  { src: `${import.meta.env.BASE_URL}hero-3.png`, title: 'Basen' },
+  { src: `${import.meta.env.BASE_URL}hero-4.png`, title: 'Piękna okolica' },
+  { src: `${import.meta.env.BASE_URL}hero-5.png`, title: 'Plac zabaw' },
   { src: `${import.meta.env.BASE_URL}all-6.jpeg`, title: 'Jacuzzi' },
   { src: `${import.meta.env.BASE_URL}all-7.jpeg`, title: 'Sauna' },
   { src: `${import.meta.env.BASE_URL}all-8.jpeg`, title: 'Wyposażona kuchnia' },
