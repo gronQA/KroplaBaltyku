@@ -286,13 +286,13 @@ const Home = () => {
                   </div>
                 </a>
 
-                <a href="mailto:kroplabaltyku@gmail.com" className="flex items-center space-x-6 group">
+                <a href="mailto:apartament.kroplabaltyku@gmail.com" className="flex items-center space-x-6 group">
                   <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-marine-500 transition-colors">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="text-sm text-slate-500 uppercase tracking-widest mb-1">E-mail</div>
-                    <div className="text-2xl font-bold">kroplabaltyku@gmail.com</div>
+                    <div className="text-2xl font-bold">apartament.kroplabaltyku@gmail.com</div>
                   </div>
                 </a>
 

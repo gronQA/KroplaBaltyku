@@ -41,7 +41,7 @@ const Footer = () => {
             <ul className="space-y-3 text-slate-400 text-sm">
               <li>Borowikowa 3G/1, Tupadły</li>
               <li><a href="tel:608089312" className="hover:text-marine-400 transition-colors">608 089 312</a></li>
-              <li><a href="mailto:kroplabaltyku@gmail.com" className="hover:text-marine-400 transition-colors">kroplabaltyku@gmail.com</a></li>
+              <li><a href="mailto:apartament.kroplabaltyku@gmail.com" className="hover:text-marine-400 transition-colors">apartament.kroplabaltyku@gmail.com</a></li>
             </ul>
           </div>
         </div>
