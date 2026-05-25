@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Gallery from '../components/pages/Gallery';
+
+const title = "Galeria | Kropla Bałtyku - Apartament w Tupadłach";
+const description = "Zobacz galerię zdjęć apartamentu Kropla Bałtyku. Wnętrza, taras, ogródek oraz udogodnienia ośrodka Bałtycka Oaza w Tupadłach.";
+---
+
+<Layout title={title} description={description}>
+	<Navbar client:load isTransparent={false} />
+	<main>
+		<Gallery client:load />
+	</main>
+	<Footer client:load />
+</Layout>

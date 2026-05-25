@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Home from '../components/pages/Home';
+
+const title = "Kropla Bałtyku | Apartament Jastrzębia Góra - Tupadły";
+const description = "Odkryj spokój i luksus w sercu Tupadeł. Apartament Kropla Bałtyku to Twój prywatny azyl blisko Jastrzębiej Góry. Rezerwuj pobyt nad polskim morzem.";
+---
+
+<Layout title={title} description={description}>
+	<Navbar client:load isTransparent={true} />
+	<main>
+		<Home client:load />
+	</main>
+	<Footer client:load />
+</Layout>

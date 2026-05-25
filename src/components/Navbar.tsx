@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { clsx, type ClassValue } from 'clsx';
@@ -9,33 +8,36 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const Navbar = () => {
+const Navbar = ({ isTransparent = false }: { isTransparent?: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const { pathname, hash } = useLocation();
-
-  const isHomePage = pathname === '/';
+  const [scrolled, setScrolled] = useState(!isTransparent);
 
   useEffect(() => {
+    if (!isTransparent) {
+      setScrolled(true);
+      return;
+    }
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20 || !isHomePage);
+      setScrolled(window.scrollY > 20);
     };
     
-    // Set initial state
     handleScroll();
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHomePage]);
+  }, [isTransparent]);
 
   useEffect(() => {
+    const hash = window.location.hash;
     if (hash) {
       const element = document.getElementById(hash.replace('#', ''));
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
       }
     }
-  }, [hash]);
+  }, []);
 
   const navLinks = [
     { name: 'Apartament', href: '/#apartament' },
@@ -54,7 +56,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-3 group">
+        <a href="/" className="flex items-center space-x-3 group">
           <div className="relative">
             <img 
               src="/favicon.svg" 
@@ -76,21 +78,21 @@ const Navbar = () => {
               Apartament
             </span>
           </div>
-        </Link>
+        </a>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
-              to={link.href}
+              href={link.href}
               className={cn(
                 "text-sm font-medium uppercase tracking-widest hover:text-marine-500 transition-colors duration-300",
                 scrolled ? "text-slate-600" : "text-white/90 drop-shadow-sm"
               )}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
           <a
             href="tel:608089312"
@@ -128,14 +130,14 @@ const Navbar = () => {
           >
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
-                  to={link.href}
+                  href={link.href}
                   className="text-lg font-medium text-slate-800 hover:text-marine-600 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
               <a
                 href="tel:608089312"

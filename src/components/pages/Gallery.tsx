@@ -8,7 +8,7 @@ const allImages = [
   { src: '/hero-3.png', title: 'Basen' },
   { src: '/hero-4.png', title: 'Piękna okolica' },
   { src: '/hero-5.png', title: 'Plac zabaw' },
-  { src: '/all-6.jpeg', title: 'Jacuzzi' },
+  { src: '/all-6.jpeg', title: 'Odpoczynek' },
   { src: '/all-7.jpeg', title: 'Sauna' },
   { src: '/all-8.jpeg', title: 'Wyposażona kuchnia' },
   { src: '/all-9.jpeg', title: 'Świetna lokalizacja' },
@@ -39,14 +39,14 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-6xl font-serif text-slate-900 mb-6"
           >
             Galeria
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-slate-500 text-lg max-w-2xl mx-auto"
@@ -59,7 +59,7 @@ const Gallery = () => {
           {allImages.map((image, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 1, scale: 1 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}

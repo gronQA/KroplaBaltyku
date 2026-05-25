@@ -9,9 +9,11 @@ import {
   Zap, 
   ThermometerSun, 
   Car, 
-  Sun
+  Sun,
+  Trees,
+  Users,
+  Wind
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const heroImages = [
   '/hero-1.png',
@@ -23,8 +25,11 @@ const heroImages = [
 
 
 const benefits = [
+  { icon: Users, title: '4 Osoby', description: 'Komfortowy pobyt dla całej rodziny' },
+  { icon: Wind, title: 'Klimatyzacja', description: 'Przyjemny chłód w upalne dni' },
   { icon: Sun, title: 'Ogródek', description: 'Słoneczny ogród od strony południowej' },
   { icon: ThermometerSun, title: 'Sauna', description: 'Relaks dla ciała i ducha' },
+  { icon: Trees, title: 'Natura', description: 'Oddech na łonie natury' },
   { icon: Waves, title: 'Basen', description: 'Ochłoda w zasięgu ręki' },
   { icon: Coffee, title: 'Kuchnia', description: 'Płyta indukcyjna, ekspres, zmywarka' },
   { icon: Car, title: 'Parking', description: 'Miejsce przypisane do apartamentu' },
@@ -32,8 +37,9 @@ const benefits = [
 ];
 
 const distances = [
+  { label: 'Las', value: '350m', detail: 'spacer w naturze' },
+  { label: 'Sklep sezonowy', value: '750m', detail: 'podstawowe zakupy' },
   { label: 'Morze', value: '900m', detail: 'w linii prostej' },
-  { label: 'Sklep sezonowy', value: '350m', detail: 'podstawowe zakupy' },
   { label: 'Centrum Jastrzębiej Góry', value: '1500m', detail: 'restauracje i atrakcje' },
 ];
 
@@ -71,9 +77,9 @@ const Home = () => {
 
         <div className="relative z-20 h-full flex items-center justify-center text-center px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
             <span className="text-marine-300 font-semibold uppercase tracking-[0.3em] mb-4 block drop-shadow-lg">
@@ -92,12 +98,12 @@ const Home = () => {
               >
                 Zarezerwuj teraz
               </a>
-              <Link 
-                to="/galeria" 
+              <a 
+                href="/galeria" 
                 className="px-10 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1"
               >
                 Zobacz galerię
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -115,31 +121,48 @@ const Home = () => {
       </section>
 
       {/* About Section / Garden */}
-      <section id="apartament" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-                <img src="/all-6.jpeg" alt="Ogród apartamentu" className="w-full h-full object-cover" />
-              </div>
-              <div className="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-8 bg-marine-600 text-white p-6 md:p-8 rounded-3xl shadow-xl max-w-[200px] md:max-w-xs">
-                <Waves className="w-8 h-8 md:w-10 md:h-10 mb-2 md:mb-4" />
-                <p className="font-serif text-lg md:text-xl leading-snug">Zrelaksuj się w Jacuzzi</p>
-              </div>
-            </motion.div>
+      <section id="apartament" className="py-24 bg-white overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative group w-full">
+              <motion.div
+                initial={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                whileHover={{ 
+                  zIndex: 40,
+                  scale: typeof window !== 'undefined' && window.innerWidth > 1024 ? 1.1 : 1,
+                  x: typeof window !== 'undefined' && window.innerWidth > 1024 ? 20 : 0
+                }}
+                viewport={{ once: true }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 150, 
+                  damping: 25 
+                }}
+                className="relative z-30 w-full"
+              >
+                <div className="aspect-[4/3] sm:aspect-[4/5] rounded-none sm:rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out lg:group-hover:aspect-square lg:group-hover:scale-105">
+                  <img 
+                    src="/all-10.jpeg" 
+                    alt="Ogród apartamentu" 
+                    className="w-full h-full object-cover transition-transform duration-700" 
+                  />
+                </div>
+                <div className="absolute -bottom-6 right-4 sm:-bottom-8 sm:-right-8 bg-marine-600 text-white p-6 md:p-8 rounded-3xl shadow-xl max-w-[180px] sm:max-w-xs z-50">
+                  <Trees className="w-8 h-8 md:w-10 md:h-10 mb-2 md:mb-4" />
+                  <p className="font-serif text-lg md:text-xl leading-snug">Odpocznij na łonie natury</p>
+                </div>
+              </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-marine-600 font-bold uppercase tracking-widest text-sm mb-4 block">Twój prywatny raj</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-8 leading-tight">Relaks w słońcu na własnym tarasie</h2>
+            <div className="px-4 sm:px-0">
+              <motion.div
+                initial={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-marine-600 font-bold uppercase tracking-widest text-sm mb-4 block">Twój prywatny raj</span>
+                <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-8 leading-tight">Relaks w słońcu na własnym tarasie</h2>
               <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
                 <p>
                   Kropla Bałtyku to wyjątkowe miejsce położone w malowniczym uścisku natury – z jednej strony otula nas szum morza, a z drugiej kojący spokój lasu. To idealne warunki do pełnego wyciszenia i regeneracji.
@@ -149,6 +172,8 @@ const Home = () => {
                 </p>
                 <ul className="space-y-4 pt-4">
                   {[
+                    'Apartament 4-osobowy: salon z rozkładaną 2-osobową sofą',
+                    'Osobna sypialnia z 2 pojedynczymi łóżkami',
                     'Część prestiżowego ośrodka Bałtycka Oaza',
                     'Bliskość piaszczystych plaż i natury',
                     'Spokojna atmosfera sprzyjająca regeneracji',
@@ -162,7 +187,8 @@ const Home = () => {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -181,7 +207,7 @@ const Home = () => {
             {benefits.map((benefit, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
@@ -214,7 +240,7 @@ const Home = () => {
                 {distances.map((item, i) => (
                   <motion.div 
                     key={i}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 1, x: 0 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     className="flex items-start space-x-6"
